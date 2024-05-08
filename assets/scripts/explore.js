@@ -47,10 +47,10 @@ function init() {
       }
     }
     synth.speak(utterance);
-    currImg.src = "/assets/images/smiling-open.png";
+    currImg.src = "assets/images/smiling-open.png";
     // when finished speaking, go back to the smiling.png
     utterance.onend = function(event) {
-      currImg.src = "/assets/images/smiling.png";
+      currImg.src = "assets/images/smiling.png";
     };
   }
 
