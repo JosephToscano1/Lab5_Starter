@@ -52,3 +52,45 @@ test('test whether a!!!! is a strong password', () => {
 test('test whether Profe330R is a strong password', () => {
   expect(isStrongPassword("Profe330R")).toBe(true);
 });
+//Strong Password F test 1
+test('test whether pas is a strong password', () => {
+  expect(isStrongPassword("pas")).toBe(false);
+});
+//Strong Password F test 2
+test('test whether paaaaaaaaaassssssss is a strong password', () => {
+  expect(isStrongPassword("paaaaaaaaaassssssss")).toBe(false);
+});
+
+//Date T test 1
+test('test whether 05/07/2004 is a valid date', () => {
+  expect(isDate('05/07/2004')).toBe(true);
+});
+//Date T test 2
+test('test whether 1/1/0001 is a valid date', () => {
+  expect(isDate('1/1/0001')).toBe(true);
+});
+//Date F test 1
+test('test whether 1/1/1 is a valid date', () => {
+  expect(isDate('1/1/1')).toBe(false);
+});
+//Date F test 2 
+test('test whether 2004/20/5 is a valid date', () => {
+  expect(isDate('2004/20/5')).toBe(false);
+})
+
+//HexColor T test 1
+test('test whether ffffff is a valid hex color', () => {
+  expect(isHexColor('ffffff')).toBe(true);
+});
+//HexColor T test 2
+test('test whether 000 is a valid hex color', () => {
+  expect(isHexColor('000')).toBe(true);
+});
+//HexColor F test 1
+test('test whether hex is a valid hex color', () => {
+  expect(isHexColor('hex')).toBe(false);
+});
+//HexColor F test 2
+test('test whether 064579908765 is a valid hex color', () => {
+  expect(isHexColor('064579908765')).toBe(false);
+});
